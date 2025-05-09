@@ -10,10 +10,10 @@ from rich.console import Console
 from rich.markdown import Markdown
 from dotenv import load_dotenv  
 
-# Créer une console Rich pour l'affichage formaté
+
 console = Console()
 
-# Variable globale pour suivre si une génération est en cours
+
 generation_en_cours = False
 stop_generation = False
 
@@ -25,7 +25,7 @@ def signal_handler(sig, frame):
         print("\n\n[Interruption de la génération...]")
         return
     else:
-        # Comportement par défaut (quitter le programme)
+        
         sys.exit(0)
 
 def clear_screen():
@@ -37,7 +37,7 @@ def render_markdown(text):
     console.print(Markdown(text))
 
 def main():
-    # Configuration du gestionnaire de signal pour CTRL+C
+    
     signal.signal(signal.SIGINT, signal_handler)
     
     try:
@@ -52,7 +52,7 @@ def main():
         print("Installation de la bibliothèque 'python-dotenv'...")
         os.system('pip install python-dotenv')
     
-    # Charger les variables d'environnement
+    
     load_dotenv()
     
     endpoint = os.getenv('AZURE_ENDPOINT')
@@ -84,7 +84,7 @@ def main():
         console.print("• Tapez 'exit', 'quit' ou 'q' pour quitter", style="yellow")
         console.print("• Tapez 'clear' pour effacer la conversation", style="yellow")
         console.print("• Tapez 'save' pour sauvegarder la conversation", style="yellow")
-        console.print("• Appuyez sur CTRL+C pendant la génération pour l'interrompre", style="yellow")
+        console.print("• Appuyez sur 'CTRL'+'C' pendant la génération pour l'interrompre", style="yellow")
         console.print("="*50, style="bold cyan")
         
         while True:
@@ -140,7 +140,7 @@ def main():
                         print(chunk, end="")
                         sys.stdout.flush()
                 
-                # Ajouter la réponse à la conversation uniquement si elle n'est pas vide
+                
                 if full_response.strip():
                     conversation.append(AssistantMessage(content=full_response))
                     
