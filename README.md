@@ -2,7 +2,7 @@
 # 💬 DeepSeek Terminal Chat (Azure)
 
 Un assistant conversationnel en ligne de commande basé sur le modèle **DeepSeek-V3** via Azure AI Inference.  
-Cette interface permet de discuter avec un LLM, de sauvegarder ou effacer la conversation, et d’afficher les réponses en Markdown grâce à `rich`.
+Cette interface permet de discuter avec un LLM et de sauvegarder ou effacer la conversation.
 
 ---
 
@@ -56,7 +56,7 @@ AZURE_MODEL=DeepSeek-V3
 ## ▶️ Lancer l’application
 
 ```bash
-python deepseek_terminal_chat.py
+python DeepSeek.py
 ```
 
 ---
