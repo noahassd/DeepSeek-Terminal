@@ -71,6 +71,7 @@ python DeepSeek.py
 • Tapez 'exit', 'quit' ou 'q' pour quitter
 • Tapez 'clear' pour effacer la conversation
 • Tapez 'save' pour sauvegarder la conversation
+• Appuyez sur CTRL+C pendant la génération pour l'interrompre
 ==================================================
 ```
 
